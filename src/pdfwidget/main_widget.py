@@ -41,6 +41,7 @@ def load_pdf(fname=None , img_list=None, **kwargs):
     grayscale -> Output grayscale image(s)
     """
     fmt = kwargs.get("fmt", "bmp")
+    kwargs["fmt"] = fmt
     # convert pdf into a list of PIL images
     if isinstance(fname, str):
         pil_imgs = convert_from_path(fname, **kwargs) 
